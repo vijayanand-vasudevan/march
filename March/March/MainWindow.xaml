@@ -1,0 +1,21 @@
+﻿<Window x:Class="March.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:March.ViewModel"
+        Title="March" Height="350" Width="525">
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Button Content="Click" 
+                Height="33" 
+                HorizontalAlignment="Left" 
+                Name="btnClick" 
+                VerticalAlignment="Top" 
+                Width="203"
+                Grid.Column="0"
+                Grid.Row="2"
+                Command="{Binding ButtonCommand}" 
+                CommandParameter="Hai" />
+    </Grid>
+</Window>
